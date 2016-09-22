@@ -18,6 +18,7 @@ class FootTrafficAnalysis
 
   def report
     process_logs
+    @galary.rooms = @galary.rooms.sort_by{|u| u.index.to_i }   
     @galary.rooms.each do |room|
       puts "Room #{room.index}, #{room.avarage_visitor_time} minute average visit, #{room.total_visitors} visitor(s) total" 
     end
