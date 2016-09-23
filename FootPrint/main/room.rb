@@ -6,8 +6,9 @@ class Room
     @index = index
     @visitors = []
   end
-
-  def add_or_update_visitor(visitor_id, activity, timestemp)
+  
+  # passing vistior id , activity  and time stamp "0  I 540"
+  def add_or_update_visitor(visitor_id, activity, timestemp)#
     visitor = visitors.find{|visitor| visitor.index == visitor_id } 
     if visitor 
       visitor.set_timings(activity, timestemp)

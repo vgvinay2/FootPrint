@@ -8,7 +8,7 @@ class Galary
 
 
   def add_or_update_log(data)
-    visitor_id, room_index, visitor_activity, timestemp = data.split
+    visitor_id, room_index, visitor_activity, timestemp = data.split  # assigning value to variable
     room = find_or_add_room(room_index)
     room.add_or_update_visitor(visitor_id, visitor_activity, timestemp)
   end

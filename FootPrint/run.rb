@@ -1,4 +1,4 @@
-Dir['./**/*.rb'].each{|file| require file }
+Dir['./main/**/*.rb'].each{|file| require file }
 
 puts '---------------Sample test 1--------------------'
 sample_1_analysis = FootTrafficAnalysis.new('sample_1.txt')
